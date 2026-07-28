@@ -1,0 +1,12 @@
+streamlit>=1.40.0
+google-genai>=1.0.0
+python-dotenv>=1.0.1
+pypdf>=5.1.0
+
+# --- Vector store backends (VECTOR_BACKEND se choose hota hai) ---
+chromadb>=0.5.20          # local development
+pinecone>=5.0.0           # cloud deployment
+
+# Streamlit Community Cloud (Linux) par ChromaDB ko naya sqlite3 chahiye hota hai.
+# Ye line sirf Linux par install hoti hai, Windows par skip ho jati hai.
+pysqlite3-binary>=0.5.3; sys_platform == "linux"
